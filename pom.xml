@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.5</version>
+		<version>3.1.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bezkoder</groupId>
@@ -15,9 +15,12 @@
 	<name>spring-boot-data-jpa</name>
 	<description>Demo project for Spring Boot Apis CRUD using Spring Data JPA</description>
 
+
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>17</java.version>
-		<start-class>mypackage.SpringBootDataJpaApplication</start-class>
+		<start-class>com.bezkoder.spring.datajpa.ServletInitializer</start-class>
 	</properties>
 
 	<dependencies>
@@ -45,7 +48,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
