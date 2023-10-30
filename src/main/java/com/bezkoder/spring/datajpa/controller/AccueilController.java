@@ -21,7 +21,7 @@ public class AccueilController {
 	@GetMapping("/")
 	public ResponseEntity<String> getAllTutorials(@RequestParam(required = false) String title) {
 		try {
-			return new ResponseEntity<>("Hello world new commit", HttpStatus.OK);
+			return new ResponseEntity<>("Hello world", HttpStatus.OK);
 
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
